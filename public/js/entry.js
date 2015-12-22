@@ -1,1 +1,2 @@
-import HelloMessage from './client/hello.jsx';
+import run from './components';
+run()
