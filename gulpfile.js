@@ -14,9 +14,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('webpack', function() {
-  gulp.src('public/js/entry.js')
+  gulp.src('src/app.js')
     .pipe(webpack( require('./webpack.config.js') ))
-    .pipe(gulp.dest('public/dist/'));
+    .pipe(gulp.dest('public/js/'));
 });
 
 gulp.task('watch', function() {
