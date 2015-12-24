@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 16px "Indie Flower", cursive; }
 
 a {
   color: #00B7FF; }
@@ -66,8 +67,45 @@ a {
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   height: 30rem;
-  background-color: blue;
-  cursor: pointer; }
+  background-color: #a58855;
+  cursor: pointer;
+  text-align: center;
+  color: white; }
+  .message h1 {
+    margin-top: 3rem;
+    padding: 0 2rem; }
+  .message h2 {
+    margin-top: 3rem;
+    padding: 0 2rem; }
+  .message p {
+    font-size: 18px;
+    padding: 0.5rem 2rem; }
+  .message .travel {
+    height: 14rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .message .travel.new-orleans {
+      background-image: url("/img/new_orleans.jpg"); }
+    .message .travel.chicago {
+      background-image: url("/img/chicago.jpg"); }
+    .message .travel.france {
+      background-image: url("/img/toulon.jpg"); }
+    .message .travel.spain {
+      background-image: url("/img/spain.jpg"); }
+    .message .travel.spree {
+      background-image: url("/img/spree.jpg"); }
+    .message .travel.francy {
+      height: 8rem;
+      background-image: url("/img/toulon.jpg"); }
+    .message .travel.spreey {
+      height: 8rem;
+      background-image: url("/img/spree.jpg"); }
+  .message .special {
+    margin-top: 8rem;
+    font-size: 4rem; }
+  .message span {
+    font-size: 2rem; }
 
 .box {
   background-color: red;

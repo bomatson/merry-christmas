@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Indie Flower", cursive;
 }
 
 a {
@@ -96,8 +97,71 @@ a {
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   height: 30rem;
-  background-color: blue;
+  background-color: #a58855;
   cursor: pointer;
+  text-align: center;
+  color: white;
+
+  h1 {
+    margin-top: 3rem;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    padding: 0 2rem;
+  }
+
+  p {
+    font-size: 18px;
+    padding: 0.5rem 2rem;
+  }
+
+  .travel {
+    height: 14rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.new-orleans {
+      background-image: url('/img/new_orleans.jpg');
+    }
+
+    &.chicago {
+      background-image: url('/img/chicago.jpg');
+    }
+
+    &.france {
+      background-image: url('/img/toulon.jpg');
+    }
+
+    &.spain {
+      background-image: url('/img/spain.jpg');
+    }
+
+    &.spree {
+      background-image: url('/img/spree.jpg');
+    }
+
+    &.francy {
+      height: 8rem;
+      background-image: url('/img/toulon.jpg');
+    }
+
+    &.spreey {
+      height: 8rem;
+      background-image: url('/img/spree.jpg');
+    }
+  }
+
+  .special {
+    margin-top: 8rem;
+    font-size: 4rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
 }
 
 .box {
@@ -170,4 +234,3 @@ a {
   -webkit-animation-name: bounceOutRight;
   animation-name: bounceOutRight;
 }
-

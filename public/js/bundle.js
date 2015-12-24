@@ -19708,15 +19708,16 @@
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
+	      var step = this.state.step;
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
 	        _react2.default.createElement(
 	          _reactAddonsCssTransitionGroup2.default,
-	          { transitionName: 'booga', transitionEnterTimeout: 300, transitionLeaveTimeout: 300 },
+	          { transitionName: 'booga', transitionEnterTimeout: 500, transitionLeaveTimeout: 500 },
 	          _react2.default.createElement(_box2.default, {
-	            key: this.state.step,
-	            step: this.state.step,
+	            key: step,
+	            step: step,
 	            transition: this.transition
 	          })
 	        )
@@ -20118,15 +20119,183 @@
 	          );
 	        case 2:
 	          return _react2.default.createElement(
-	            'div',
-	            { className: 'message', onClick: this.moveOn },
-	            ' Here '
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'To the love of my life,'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Merry Christmas!! This year, I decided to make this silly web app instead of wrapping a present.'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Turns out wrapping a present is WAYYYY easier '
+	            ),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Click anywhere in this box to continue the unwrapping!'
+	            )
+	          );
+	        case 3:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'You know how we\'ve been talking a lot about traveling?'
+	            ),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Places like...'
+	            )
+	          );
+	        case 4:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'New Orleans!'
+	            ),
+	            _react2.default.createElement('div', { className: 'travel new-orleans' }),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'and...'
+	            )
+	          );
+	        case 5:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Chicago!'
+	            ),
+	            _react2.default.createElement('div', { className: 'travel chicago' }),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'and...'
+	            )
+	          );
+	        case 6:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Southern France!'
+	            ),
+	            _react2.default.createElement('div', { className: 'travel france' }),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'and...'
+	            )
+	          );
+	        case 7:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Barcelona!'
+	            ),
+	            _react2.default.createElement('div', { className: 'travel spain' }),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'and so many more!'
+	            )
+	          );
+	        case 8:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Another thing'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'We\'ve talked plenty about how silly shopping sprees are:'
+	            ),
+	            _react2.default.createElement('div', { className: 'travel spree' }),
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'It got me thinking...'
+	            )
+	          );
+	        case 9:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Let\'s do the math...'
+	            ),
+	            _react2.default.createElement('div', { className: 'travel francy' }),
+	            '+',
+	            _react2.default.createElement('div', { className: 'travel spreey' }),
+	            '='
+	          );
+	        case 10:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'special' },
+	              '$1000 travel spree!!!!'
+	            ),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'To any place, anytime, anywhere in the world!. This offer does not expire :)'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'One more thing...'
+	            )
+	          );
+	        case 11:
+	          return _react2.default.createElement(
+	            _message2.default,
+	            { transition: this.moveOn },
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'special' },
+	              'I LOVE YOU SO MUCH'
+	            ),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Merry Christmas babe :)'
+	            )
 	          );
 	        default:
 	          return _react2.default.createElement(
 	            'div',
 	            { className: 'message' },
-	            ' more '
+	            ' fin. '
 	          );
 	      }
 	    }
@@ -20342,8 +20511,8 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { onClick: this.transition },
-	        ' Here '
+	        { className: 'message', onClick: this.transition },
+	        this.props.children
 	      );
 	    }
 	  }]);

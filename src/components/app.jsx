@@ -15,12 +15,13 @@ class App extends React.Component {
   }
 
   render() {
+    let step = this.state.step;
     return (
       <div className='container'>
-        <ReactCSSTransitionGroup transitionName="booga" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+        <ReactCSSTransitionGroup transitionName="booga" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
           <Box 
-            key={this.state.step}
-            step={this.state.step}
+            key={step}
+            step={step}
             transition={this.transition}
           />
         </ReactCSSTransitionGroup>
