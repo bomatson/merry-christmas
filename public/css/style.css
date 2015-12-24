@@ -5,11 +5,91 @@ body {
 a {
   color: #00B7FF; }
 
+@-webkit-keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0); }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); } }
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0); }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); } }
+
+@keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg); }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg); }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg); }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg); }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0); }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0); } }
+
+.message {
+  position: absolute;
+  width: 80%;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  height: 30rem;
+  background-color: blue;
+  cursor: pointer; }
+
 .box {
   background-color: red;
   border: 1px solid white;
+  cursor: pointer;
   height: 30rem;
-  position: relative; }
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; }
+  .box:focus, .box:hover, .box:active {
+    -webkit-animation-name: buzz-out;
+    animation-name: buzz-out;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
   .box .bow {
     background-image: url("/img/white.png");
     position: absolute;
@@ -20,15 +100,29 @@ a {
     left: 4.5rem;
     background-size: contain;
     background-repeat: no-repeat; }
-  .box .ribbon-1 {
+  .box .ribbon {
+    position: absolute;
     background-color: green;
     width: 100%;
     height: 5rem;
-    margin-top: 15rem; }
-  .box .ribbon-2 {
-    position: absolute;
-    top: 0;
-    left: 7rem;
-    background-color: green;
-    height: 100%;
-    width: 5rem; }
+    top: 15rem; }
+    .box .ribbon.vertical {
+      top: 0;
+      left: 7rem;
+      background-color: green;
+      height: 100%;
+      width: 5rem; }
+
+.booga-enter {
+  opacity: 0.01; }
+
+.booga-enter.booga-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.booga-leave {
+  opacity: 1; }
+
+.booga-leave.booga-leave-active {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight; }
